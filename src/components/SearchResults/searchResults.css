@@ -1,0 +1,157 @@
+.search-results-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.results-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 25%;
+  left: 0;
+  height: 60vh;
+  width: 5vh;
+  padding: 1vh 0;
+  overflow: hidden;
+  background-color: rgba(18, 18, 18, 0.6);
+  color: whitesmoke;
+  border-radius: 1vw;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  transform: perspective(1000px) rotateX(5deg);
+}
+
+.results-header h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh auto;
+  color: whitesmoke;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 70vw;
+  overflow: auto;
+  background-color: rgba(18, 18, 18, 0.3);
+  color: whitesmoke;
+  border-radius: 3vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+
+  /* Hide scrollbar for WebKit browsers */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+
+  /* Hide scrollbar for IE, Edge */
+  -ms-overflow-style: none;
+}
+
+.search-results {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.track-list,
+.playlist-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.info-track,
+.playlist-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #333;
+  width: 100%;
+  padding: 0.5vw;
+  margin: 1vh 0.8vw;
+  border-radius: 0.5vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.playlist-info:hover,
+.info-track:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-track p {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.playlist-info p {
+  text-align: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.icon-list {
+  cursor: pointer;
+}
+
+.header-burger {
+  color: whitesmoke;
+  margin: 1vh;
+}
+
+
+@media (min-width: 1024px) {
+  .search-results-container {
+    flex-direction: column;
+  }
+
+  .results-header {
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 45vw;
+    height: 5vh;
+    padding: 0;
+    position: relative;
+    ;
+  }
+
+  .results-header h2 {
+    font-size: 1.25rem;
+    margin: 0 auto;
+    margin-left: 33%;
+    writing-mode: horizontal-tb;
+    text-orientation: unset;
+  }
+
+  .search-results {
+    width: 45vw;
+    border-radius: 1vw;
+    transform: perspective(1000px) rotateX(5deg);
+  }
+
+  .header-burger {
+    margin: 0;
+    margin-right: auto;
+    padding-left: 1vw;
+  }
+}
